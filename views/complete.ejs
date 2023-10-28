@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tasks</title>
+  </head>
+  <body>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #fff;
+            margin-left: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .task-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .task-description {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #777;
+        }
+
+         .publish-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .publish-button:hover {
+            background-color: #0056b3;
+        }
+
+        .task-body {
+            font-size: 16px;
+            margin-top: 20px;
+            word-wrap: break-word; 
+            overflow-wrap: break-word; 
+        }
+
+
+        .task-body-full {
+            display: none;
+        }
+
+
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+     <header>
+        <nav>
+            <div class="logo">
+                <a href="/">TODO</a>
+            </div>
+            <div class="links">
+                <a href='/create'>New Task</a>
+                <a href='/tasks'>My Tasks</a>
+                <a href='/complete'>Completed Tasks</a>
+                
+            </div>
+        </nav>
+    </header>
+
+    <h1>ALL COMPLETED TASKS</h1>
+        <% tasks.forEach(task => { %>
+        <div class="task-card">
+            <h2 class="task-title"><%= task.title %></h2>
+            <h3 class="task-description"><%= task.description %></h3>
+            <h2 class="task-time">Completed at: <%= task.lastUpdateAt %></h2>
+            <div class="button-container">
+            </div>
+
+        </div>
+        <% }); %>
+        
+    </div>
+        
+  </body>
+</html>

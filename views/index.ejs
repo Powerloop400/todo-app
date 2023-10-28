@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Home Page</title>
+</head>
+<body>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #fff;
+            margin-left: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+     <header>
+        <nav>
+            <div class="logo">
+                <a href="/">TODO</a>
+            </div>
+            <div class="links">
+                <a href='/create'>New Task</a>
+                <a href='/tasks'>My Tasks</a>
+                <a href='/complete'>Completed Tasks</a>
+                
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <p>
+            Welcome to my TODO APP
+        </p>
+
+        <h1>This is Balogun Abdurrahman Mayowa's Altschool Assignment submission</h1>
+
+        <a href="/tasks">
+            <button>My Tasks</button>
+        </a>
+        <form class="logout-form" action="/logout" method="post">
+                    <button type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
